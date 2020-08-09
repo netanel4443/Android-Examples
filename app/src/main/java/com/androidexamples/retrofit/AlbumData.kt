@@ -1,4 +1,4 @@
-package com.androidexamples
+package com.androidexamples.retrofit
 
 import com.google.gson.annotations.Expose
 
