@@ -1,4 +1,4 @@
-package com.androidexamples.genericrecyclerview
+package com.androidexamples.exampless.genericrecyclerview
 
 import android.view.LayoutInflater
 import android.view.View
@@ -18,7 +18,9 @@ open class GenericRecyclerViewAdapter<T> :RecyclerView.Adapter<GenericViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GenericViewHolder<T> {
         val inflater=LayoutInflater.from(parent.context)
         val view=inflater.inflate(viewType,parent,false)
-        return GenericViewHolder(view)
+        return GenericViewHolder(
+            view
+        )
     }
 
     override fun getItemCount(): Int {

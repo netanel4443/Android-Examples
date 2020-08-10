@@ -1,6 +1,5 @@
-package com.androidexamples.retrofit
+package com.androidexamples.exampless.retrofit
 
-import android.content.Context
 import android.util.Log
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers

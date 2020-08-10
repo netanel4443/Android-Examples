@@ -1,10 +1,10 @@
-package com.androidexamples.recyclerviews
+package com.androidexamples.exampless.recyclerviews
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.androidexamples.*
-import com.androidexamples.genericrecyclerview.*
+import com.androidexamples.exampless.genericrecyclerview.*
 import kotlinx.android.synthetic.main.recyclerview_another_cell_layout.view.*
 import kotlinx.android.synthetic.main.recyclerview_cell_design.view.*
 
