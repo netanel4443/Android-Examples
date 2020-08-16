@@ -1,4 +1,4 @@
-package com.androidexamples.exampless.genericrecyclerview
+package com.androidexamples.examples.genericrecyclerview
 
 import android.view.LayoutInflater
 import android.view.View

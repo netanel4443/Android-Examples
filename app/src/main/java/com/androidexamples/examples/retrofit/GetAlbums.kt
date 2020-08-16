@@ -1,4 +1,4 @@
-package com.androidexamples.exampless.retrofit
+package com.androidexamples.examples.retrofit
 
 
 import io.reactivex.rxjava3.core.Single

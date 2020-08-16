@@ -1,4 +1,4 @@
-package com.androidexamples.exampless.retrofit
+package com.androidexamples.examples.covid19
 
 import android.util.Log
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
@@ -8,10 +8,10 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-class GetAlbumsWithRetrofit() {
+class Covid19Details {
 
-    fun getAlbums(){
-        val baseUrl="https://jsonplaceholder.typicode.com/"
+    private fun coronaDetails() {
+        val baseUrl="https://api.covid19api.com/"
 
         val retrofitBuilder= Retrofit.Builder()
             .baseUrl(baseUrl)
@@ -19,20 +19,22 @@ class GetAlbumsWithRetrofit() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        val data=retrofitBuilder.create(GetAlbums::class.java)
+        val data=retrofitBuilder.create(CoronaApi::class.java)
 
-        data.getAlbumList().subscribeOn(Schedulers.io())
+        data.getCoronaSummary().subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(::handleData){ Log.e("MainActivity",it.message)}
+            .subscribe(::handleData){ Log.e("PixabayActivity",it.message)}
+    }
 
-}
-private fun handleData(response: Response<ArrayList<AlbumData>>){
-    if (response.isSuccessful){
-        val data=response.body()
+    private fun handleData(response: Response<Countries>){
 
-        data?.forEach {album->
-            println(album.url)
+        if (response.isSuccessful){
+            val body=response.body()
+
+            body?.countries?.let {
+            //    adapter.addItems(it)//recyclerview adapter
+            }
+
         }
     }
-}
 }
