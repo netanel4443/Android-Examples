@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".examples.pixabayapi.PixabayActivity"></activity>
-        <activity android:name=".examples.splashscreen.SplashScreen"
-            android:theme="@style/SplashTheme">
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".examples.pixabayapi.PixabayActivity" />
+        <activity android:name=".examples.circularprogressbar.CircularProgressBarActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
